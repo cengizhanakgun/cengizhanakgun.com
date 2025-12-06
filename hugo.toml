@@ -1,0 +1,11 @@
+baseURL = "https://example.com/"
+languageCode = "tr-tr"
+title = "Cengizhan Akgün Blog"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  defaultTheme = "auto"
+  disableThemeToggle = false
