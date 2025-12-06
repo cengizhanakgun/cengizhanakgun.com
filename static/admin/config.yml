@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: cengizhanakgun/cengizhanakgun.com
+  branch: main
+  base_url: https://decap-oauth.coderista3008.workers.dev
+  auth_endpoint: /auth
+  site_domain: cengizhanakgun.com
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Yazılar"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
+      - { label: "Özet", name: "summary", widget: "text", required: false }
+      - { label: "Kapak Görseli", name: "cover", widget: "image", required: false }
+      - { label: "Kategori", name: "categories", widget: "list", required: false }
+      - { label: "Etiketler", name: "tags", widget: "list", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
